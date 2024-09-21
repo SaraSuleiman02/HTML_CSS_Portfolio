@@ -455,3 +455,22 @@ h5 {
         margin-top: 2rem;
     }
 }
+
+@media (max-width: 454px){
+    body {
+        font-size: 1rem;
+    }
+    #navbar .right-nav ul {
+        width: 400px;
+        justify-content:space-around;
+    }
+    .services-grid {
+        margin-left: 5rem;
+    }
+    .project, .project img {
+        width: 30rem;
+    }
+    .testimonial {
+        width: 25rem;
+    }
+}
