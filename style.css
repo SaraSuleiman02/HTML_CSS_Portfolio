@@ -165,6 +165,7 @@ h5 {
     height: 50rem;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -349,6 +350,7 @@ h5 {
 #footer {
     padding: 2em;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
@@ -378,13 +380,78 @@ h5 {
 }
 
 /* Media Queries */
+@media (max-width:768px) {
+    .boxed-page {
+        width: 80%;
+    }
+    #navbar .right-nav ul {
+        padding: 3rem;
+        width: 400px;
+    }
+    .services-grid {
+        grid-template-columns: repeat(1, 310px);
+    }
+    .proj-grid {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(4, auto);
+    }
+    .testimonial {
+        width: 50rem;
+        border: 1px solid var(--second-text-color);
+        border-radius: 6px;
+        background-color: #0076b64a;
+        padding: 1rem;
+        margin: 1em 0;
+        display: flex;
+    }
+}
+
+
 @media (max-width:480px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    h3 {
+        font-size: 2rem;
+    }
+    .img-container img {
+        height: 20rem;
+        border-radius: 2rem;
+        margin-left: 1rem;
+    }
+    .hero-p {
+        width: 50%;
+        margin-left: 1rem;
+        margin-top: -20rem;
+    }
     p {
-        font-size: 2.3rem;
+        font-size: 1.3rem;
     }
 
     .services-grid .service {
-        height: 30rem;
-        width: 31rem;
+        height: 25rem;
+        width: 26rem;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+    .testimonial {
+        width: 30rem;
+    }
+    
+    .testimonial img {
+        height: 70px;
+        border-radius: 50%;
+        margin-left: -4rem;
+    }
+    #footer .left-footer {
+        width: 100%;
+    }
+
+    #footer .right-footer  {
+        margin-top: 2rem;
     }
 }
